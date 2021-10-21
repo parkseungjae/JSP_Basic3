@@ -30,10 +30,11 @@
 	<%=request.getAttribute("name")%><br> session :
 	<%=session.getAttribute("name")%><br> application :
 	<%=application.getAttribute("name")%><br>
-	<a href="secondPage.jsp">secondPage.jsp</a>
+	<a href="secondPage.jsp">secondPage.jsp</a><hr>
 
-
-
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<c:set var ="se" value = "세션설정값입니다" scope="session"/>
+session : ${se }<br>
 
 </body>
 </html>
