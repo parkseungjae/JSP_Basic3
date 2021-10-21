@@ -10,7 +10,9 @@
 	logout.jsp
 	<hr>
 	<%
-	session.invalidate();
+	//session.removeAttribute("loginUser"); //특정 세션만 만료
+	//session.setMaxInactiveInterval(5);//5초후 모든 세션 만료	
+	session.invalidate();//모든 세션 만료
 	%>
 	<a href="login.jsp">로그인 이동</a>
 	<a href="main.jsp">메인 이동</a>
